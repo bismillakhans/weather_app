@@ -1,0 +1,78 @@
+{% comment %} {% load static %}
+<html>
+	<head>
+		<link rel="stylesheet" href="{% static 'css/weatherApp.css'%}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+	</head>
+	<body>
+	
+		<div class='mainblock'><h1 align='center' class='heading'>WHEATHER</h1></div>
+		
+			<form method="POST">
+    {% csrf_token %}
+    <div class="field has-addons">
+        <div class="control is-expanded">
+            {{ form.name }}
+        </div>
+        <div class="control">
+            <button class="button is-info">
+                Add City
+            </button>
+        </div>
+    </div>
+</form>
+			 {% for weather in weather_data %}
+			 
+			 
+			  <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-offset-4 is-4">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-left">
+                                <figure class="image is-50x50">
+                                    <img src="http://openweathermap.org/img/w/{{weather.icon}}.png" alt="Image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <div class="content">
+                                    <p>
+                                        <span class="title">{{weather.city}}</span>
+                                        <br>
+                                        <span class="subtitle">{{weather.temperature}}° F</span>
+                                        <br> {{weather.description}}
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	{% endfor %}
+			</div>
+		</div>
+		
+		
+	</body>
+</html> {% endcomment %}
+
+
+{% load static %}
+<html>
+	<head>
+		<script src='{% static 'css/weatherApp.js' %}'></script>
+		<link rel="stylesheet" href='{% static 'css/weatherApp.css' %}'>
+	</head>
+	<body>
+		<div class='mainblock'><h1 align='center' class='heading'>WHEATHER</h1></div>
+		<div class='secondblock' id='secondblock'> 
+			<input class='inputfeild' id='getInput'> <button class="addButton" onclick='addCity()'> ADD</button><br>
+			
+			
+			
+		</div>
+	</body>
+</html>

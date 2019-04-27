@@ -1,0 +1,77 @@
+body{
+	background : url('city.jpg') no-repeat;
+	background-size: cover;
+}
+.mainblock{
+	margin: 10px 10px;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); 
+	opacity : 0.9;
+	padding : 20px 0px;
+}
+
+.heading{
+	color : white;
+	font-family : cursive;
+}
+
+.secondblock{
+	margin: -10px 10px;
+	
+	padding:100px 0px;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); 
+}
+.inputfeild{
+	width:30%;
+	margin : 30px 30%;
+	padding : 8px 10px;
+	border-top: none;
+	border-left:none;
+	border-right:none;
+	font-size:20;
+}
+.addButton{
+	width : 10%;
+	margin: 5px -290px;
+	padding : 13px 10px;
+	background:#4286f4;
+	color:white;
+	border:none;
+	cursor:pointer;
+}
+
+.addButton:hover{
+	width : 10%;
+	margin: 0px -290px;
+	padding : 13px 10px;
+	background:#10d6e8;
+	color:white;
+	border:none;
+	cursor:pointer;
+}
+.thirdblock{
+	border: 2px solid #858b8c;
+	border-top:none;
+	border-right:none;
+	border-left:none;
+	margin:5px 30%;
+}
+
+.menu{
+	margin : 20px 30%;
+	background: rgb(0, 0, 0); /* Fallback color */
+	background: rgba(0, 0, 0, 0.5); 
+	color : white;
+	border-color: white;
+	padding: 10px 10px;
+}
+.display{
+	color:white;
+	margin:-55px 50%;
+	border : 2px solid #858b8c;
+	padding: 0px 60px;
+	border-top:none;
+	border-right:none;
+	border-left:none;
+}
